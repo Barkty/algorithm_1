@@ -9,6 +9,9 @@ body {
     width: 100%;
     height: 100vh;
 }
+h1, li {
+    color: white;
+}
 .wrapper {
     display: flex;
     align-items: center;

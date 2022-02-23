@@ -10,11 +10,13 @@ const load = () => {
 const charToInt = () => {
     var input = document.getElementById('char').value;
     console.log(input);
-    const code = input.charCodeAt(0);
-    console.log(code);
-    store += `<li>Integer correspondent of ${input} is ${code}</li>`;
-    window.localStorage.setItem('cor', store);
-
-    var ul = document.getElementById('ul');
-    ul.innerHTML = store;
+    for(let i = 0; i < input.length; i++) {
+        const code = input.charCodeAt(i);
+        console.log(code);
+        store += `<li>Integer correspondent of ${input[i]} is ${code}</li>`;
+        window.localStorage.setItem('cor', store);
+    
+        var ul = document.getElementById('ul');
+        ul.innerHTML = store;
+    }
 }
